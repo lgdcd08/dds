@@ -1,0 +1,601 @@
+@charset "UTF-8";
+
+/* Importação de fonts (google fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+/* Variáveis */
+:root {
+    --background: #5d55a0;
+    --branco: #fff;
+    --amarelo: #e5b567;
+    --azul: #9cdcfe;
+    --azulMedio: #3b468c;
+    --azulEscuro: #05152b;
+    --cinzaClaro: #d6d6d6;
+    --cinza: #858585;
+    --laranja: #e87d3e;
+    --pink: #b05279;
+    --roxo: #9e86c8;
+    --verde: #b4d273;
+    --vermelho: #ff0000;
+}
+
+/* CSS Reset (compatibilizar com todos navegadores) */
+* {
+    height: ;
+    margin: var(#ffff);
+    margin-top:auto;
+    padding: 0;
+    border: 0;
+    border-radius: 20px;
+}
+
+/* Layout >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: em;
+    /* 1em = 100% (tamanho padrão) */
+    background-color: var(--background );
+}
+
+.container {
+    margin: 0,1%;
+    /* centralizar o bloco */
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+
+.botao {
+    text-decoration: red  ;
+    color: var(--branco);
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: var(--vermelho);
+    width: 400px;
+    padding: 10px 20px;
+    border: 2px solid var(--branco);
+    border-radius: 25px;
+    align-self: top;
+    margin-top: 200px;
+}
+
+/* Layou para 3 cartoes, se forem 4 precisa mexer na altura e largura*/
+.card {
+    container: justify;
+    position: center;
+    width: 400px;
+    height: 520px;
+    margin-top: 25px;
+    background-color: var();
+    border: 1px solid var(--azul);
+    border-radius: 25px;
+    /*borda arredondada*/
+    text-align: center;
+    /*centralizar as coisas de dentro do cartão*/
+}
+
+.card img {
+    border-radius: 25px 25px 0px 0px;
+    text-align: var(--azulMedio);
+}
+
+.card h3 {
+    margin-top: 15px;
+}
+
+.card p {
+    text-align: justify;
+    padding: 10px 30px 50px 30px;
+}
+
+.card a {
+    padding: 10px 100px;
+    border: 11100px;
+    background-color: var(--azul);
+    color: var(--azulEscuro)
+}
+
+
+/* Fim do Layout <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+address {
+    padding: 35px 10px 50px 10px;
+    background: url(img/foneback.jpg);
+    background-size: flex;
+    background-position: center;
+    color: #fff;
+  }
+  
+  address a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  address img {
+    padding-top: 5px;
+  }
+  
+  #iconeLocal {
+    display: right;
+  }
+  
+  #dados {
+    margin: 30px 10px 15px 0px;
+  }
+  
+  #googleMaps {
+    display: none;
+  }
+  
+  footer {
+    padding: 50px 0px;
+    background-color: #343538;
+    font-size: 0.875em;
+    color: #fff;
+    text-align: center;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  #social {
+    margin-bottom: 125px;
+  }
+
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/****** Cabeçalho ******/
+header {
+    height: 65px;
+    /* background-color: #00ffff;*/
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
+}
+
+#check {
+    display: none;
+}
+
+/* Efeito "deslizar o menu" */
+/* Se check estiver "ticado", crir um estilo para ul*/
+#check:checked~ul {
+    right: 0;
+}
+
+label {
+    font-size: 3em;
+    position: flex;
+    top: 15px;
+    right: 105px;
+    /* transparência (0 a 1 (100%) */
+    color: rgba(156, 220, 254, 0.9);
+}
+
+nav ul {
+    list-style: none;
+    background-color: rgba(15, 15, 15, 0.9);
+    height: 100vh;
+    position: fixed;
+    top: 65px;
+    right: -50%;
+    width: 50%;
+    transition: all 0.5s;
+}
+
+nav ul li {
+    padding: 20px 50px;
+    border-bottom: 10px solid var(--cinza);
+    text-align: flex;
+}
+
+nav ul li a {
+    color: var(--azul);
+    /* remover sublinhado */
+    text-decoration: none;
+}
+
+/****** Banner ******/
+main {
+    height: 60vh;
+    /* ajuste da altura do Banner */
+    background: url(img/cdjemfesta.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1,
+h2 {
+    /* efeito de sombra nos textos */
+    text-shadow: #000 0.05em 0.05em 0.05em;
+}
+
+main h1 {
+    color: var(--amarelo);
+    font-family: "Koulen", sans-serif;
+    font-size: 2.9em;
+}
+
+main h2 {
+    color: var(--branco);
+    font-size: 2.2em;
+    margin-top: 25px;
+    font-weight: 800;
+}
+
+/******* Destaque *******/
+#destaque {
+    background: url(img/ondassonoras.png);
+    background-size: cover;
+    background-position: center;
+    /* espaçamento interno para não encostar na borda da tela do dispositivo */
+    padding: 50px 15px;
+}
+
+/* Atenção!!! Organizando o container após o destaque o estilo é aplicado apenas ao container da seção de destaque */
+#destaque .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Para esconder a imagem usamos "display: none" no container da imagem | Para exibir novamente em telas maiores, usamos "display: block" */
+/*
+#imagemDestaque {
+    display: none;
+}
+*/
+#imagemDestaque img {
+    width: 200px;
+    height: 200px;
+    /* arredondar uma imagem quadrada */
+    border-radius: 50%;
+}
+
+#textoDestaque {
+    color: var(--branco);
+}
+
+#textoDestaque h2 {
+    margin-bottom: 20px;
+}
+
+/* Atenção !!! Detalhe do sinal ">" ref. ao elemento imediato */
+#textoDestaque>p {
+    margin-bottom: 15px;
+}
+
+.topicos {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.topicos img {
+    margin-right: 10px;
+}
+
+.topicos p {
+    font-weight: 600;
+}
+
+/****** Sobre ******/
+/* O estilo abaixo será aplicado apenas ao container que está subordinado a section "sobre" */
+#sobre {
+    background-color: var(--azulMedio);
+    padding: 60px 15px;
+}
+
+#sobre .container {
+    
+    flex-direction: column;
+}
+
+#sobre h2,
+p {
+    color: var(--branco);
+}
+
+#sobre h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+#video iframe {
+    width: 340px;
+    height: 191px;
+    margin-top: 20px;
+}
+
+footer {
+    display: grid;
+    place-items: center; /* Centraliza tanto na vertical quanto na horizontal */
+    height: 100px;
+    background: #333;
+    color: white;
+}
+
+/****** Faixa de destaque ******/
+#faixaDestaque {
+    background: url(img/mixeramarelado.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 15px;
+}
+
+#faixaDestaque .container {
+    flex-direction: column;
+}
+
+#imagemFaixa img {
+    width: 256px;
+    height: 256px;
+}
+
+#textoFaixa h2 {
+    color: var(--branco);
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+#textoFaixa p {
+    margin-bottom: 50px;
+}
+
+/* Seção de conteúdo (cards) */
+
+#conteudo {
+    padding:  50px 0px;
+    border-radius: 50%;
+}
+
+#conteudo .container {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+}
+#conteudo h2 {
+    color: var(--azul);
+    margin-bottom: 25px;
+    border-radius: 50%;
+}
+#todos {
+    color: var(--azul);
+    margin-top: 50px;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: 700px;
+}
+
+.containerCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Fim | Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 576px) {
+
+    /****** Layout ******/
+    .container {
+        max-width: 540px;
+        /* background-color: #ffff00;*/
+    }
+
+    /****** Cabeçalho ******/
+    nav ul {
+        right: -25%;
+        width: 25%;
+    }
+
+    /****** Banner ******/
+    main {
+        height: 100vh;
+    }
+
+    main h1 {
+        font-size: 3em;
+    }
+
+    /****** destaque ******/
+    #destaque .container {
+        flex-direction: row;
+    }
+
+    #imagemDestaque {
+        margin-right: 50px;
+    }
+
+    #imagemDestaque img {
+        width: 256px;
+        height: 256px;
+    }
+
+    /****** Sobre ******/
+    #video iframe {
+        width: 560px;
+        height: 315px;
+    }
+}
+
+/* Fim | Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 768px) {
+
+    /******* Layout ******/
+    .container {
+        max-width: 720px;
+        /* background-color: #00ff00; */
+    }
+
+    /****** Banner ******/
+    main {
+        height: 80vh;
+    }
+
+    main h1 {
+        font-size: 4em;
+    }
+
+    /****** Destaque ******/
+    #imagemDestaque img {
+        width: 440px;
+        height: 440px;
+    }
+    /***Seçao de conteúido cARS ***/
+    .card {
+        margin: 0px 10px;
+    }
+}
+
+/* Fim | Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 992px) {
+
+    /****** Layout ******/
+    .container {
+        max-width: 960px;
+        /* background-color: #ffa500; */
+    }
+
+    /****** Banner ******/
+    main {
+        height: 70vh;
+    }
+}
+
+/* Fim | Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1200px) {
+
+    /****** Layout ******/
+    .container {
+        max-width: 1140px;
+        /* background-color: #ff009d; */
+    }
+
+    /****** Cabeçalho ******/
+    header {
+        height: 100px;
+    }
+
+    #logo img {
+        width: 194px;
+        height: 194px;
+    }
+
+    /* Transformação do menu */
+    label {
+        display: none;
+    }
+
+    nav ul {
+        margin-top: 25px;
+        width: 100%;
+        height: auto;
+        position: static;
+        /* remover a cor do background */
+        background-color: transparent;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: var(--azul);
+    }
+
+    nav ul li a:hover {
+        color: var(--amarelo);
+    }
+
+    /****** Banner ******/
+    main h1 {
+        font-size: 6em;
+    }
+
+    main h2 {
+        font-size: 3em;
+    }
+
+    /****** Destaque ******/
+    #destaque {
+        /* O código abaixo fixa o banner (efeito parallax) */
+        background-attachment: fixed;
+    }
+
+    /******* Sobre ******/
+    #sobre .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #video iframe {
+        margin: 0;
+    }
+
+    /***** Faixa de destaque ******/
+    #faixaDestaque {
+        background-attachment: fixed;
+    }
+
+    #faixaDestaque .container {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #imagemFaixa img {
+        width: 400px;
+        height: 400px;
+    }
+   
+}
+
+/* Fim | PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/* Telas Grandes (FullHD / 4K / SmartTV) >>>>>>>>>>>*/
+@media (min-width: 1400px) {
+
+    /****** Layout ******/
+    .container {
+        max-width: 1360px;
+        /* background-color: #7d5b8c; */
+    }
+
+    /****** Banner ******/
+    main {
+        height: 100vh;
+    }
+
+    main h1 {
+        font-size: 6.5em;
+    }
+
+    main h2 {
+        font-size: 4em;
+    }
+}
+
+/* Fim | Telas Grandes (FullHD / 4K / SmartTV) >>>>>*/
